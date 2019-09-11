@@ -1,44 +1,61 @@
+//form template
 import React, { Component } from "react";
+import { TextField } from "react-native-material-textfield";
+import { compose } from "recompose";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { Formik } from "formik";
-import withStyles from "@material-ui/core/styles/withStyles";
-import { Form } from "./form";
-import Paper from "@material-ui/core/Paper";
+import {
+  handleTextInput,
+  withNextInputAutoFocusForm,
+  withNextInputAutoFocusInput
+} from "react-native-formik";
+import * as Yup from "yup";
+import Switch from "./../Switch";
 
-const styles = theme => ({
-    paper: {
-        marginTop: theme.spacing.unit * 8,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: `${theme.spacing.unit * 5}px ${theme.spacing.unit * 5}px ${theme
-            .spacing.unit * 5}px`
-    },
-    container: {
-        maxWidth: "200px"
-    }
+const FormikInput = compose(
+  handleTextInput,
+  withNextInputAutoFocusInput
+)(TextField);
+
+const Form = withNextInputAutoFocusForm(View);
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string("Enter a name").required("Name is required"),
+  email: Yup.string("Enter your email")
+    .email("Enter a valid email")
+    .required("Email is required"),
+  password: Yup.string("Choose a password")
+    .min(8, "Password must contain at least 8 characters")
+    .required("Password is required"),
+  confirmPassword: Yup.string("Enter your password")
+    .required("Confirm your password")
+    .oneOf([Yup.ref("password")], "Password does not match")
 });
 
-class InputForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+const FormikForm = props => (
+  <Formik
+    onSubmit={values => alert(JSON.stringify(values, null, 2))}
+    validationSchema={validationSchema}
+    initialValues={props.initialValues}
+    render={props => (
+      <Form>
+        <FormikInput label="first name" name="firstName" />
+        <FormikInput label="email" name="email" type="email" />
+        <FormikInput label="password" name="password" />
+        <FormikInput label="confirm password" name="confirmPassword" />
+        <Switch label="I have read and agree to terms" name="termAgreement" />
+        <Button onPress={props.handleSubmit} title="SUBMIT" />
+        <Text style={{ fontSize: 20 }}>{JSON.stringify(props, null, 2)}</Text>
+      </Form>
+    )}
+  />
+);
 
-    render() {
-        const classes = this.props;
-        return (
-            <React.Fragment>
-                <div className={classes.container}>
-                    <Paper elevation={1} className={classes.paper}>
-                        <h1>Form</h1>
-                        <Formik
-                            render={props => <Form {...props} />}
-                        />
-                    </Paper>
-                </div>
-            </React.Fragment>
-        );
-    }
-}
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 100,
+    width: "100%"
+  }
+});
 
-export default withStyles(styles)(InputForm);
+export default FormikForm;
