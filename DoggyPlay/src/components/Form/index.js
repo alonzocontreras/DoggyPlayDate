@@ -39,7 +39,8 @@ const FormikForm = props => (
     initialValues={props.initialValues}
     render={props => (
       <Form>
-        <FormikInput label="first name" name="firstName" />
+        <FormikInput label="First Name" name="firstName" />
+        <FormikInput label="Last Name" name="lastName" />
         <FormikInput label="email" name="email" type="email" />
         <FormikInput label="password" name="password" />
         <FormikInput label="confirm password" name="confirmPassword" />
