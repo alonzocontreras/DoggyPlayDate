@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import Header from "../components/Header";
-import InputForm from "../components/InputForm";
+import Drawer from "../components/Drawer";
 
 export default function HomeScreen() {
   return (
@@ -14,7 +14,7 @@ export default function HomeScreen() {
         <ScrollView
             contentContainerStyle={styles.container}>
           <Header title="Create Account"/>
-          <InputForm style={styles.formContainer}/>
+          <Drawer style={styles.formContainer}/>
         </ScrollView>
       </View>
   );
