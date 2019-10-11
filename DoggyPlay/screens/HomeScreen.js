@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -6,18 +6,27 @@ import {
 } from 'react-native';
 
 import Header from "../components/Header";
-import Drawer from "../components/Drawer";
+import LoginForm from "../components/LoginForm";
+import MenuToggle from "../components/MenuToggle";
 
-export default function HomeScreen() {
+
+
+export default class HomeScreen extends Component  {
+  constructor(props){
+    super(props)
+  }
+  render() {
   return (
       <View style={styles.container}>
         <ScrollView
             contentContainerStyle={styles.container}>
           <Header title="Create Account"/>
-          <Drawer style={styles.formContainer}/>
+          <LoginForm style={styles.formContainer}/>
+          <MenuToggle navigation={this.props.navigation} />
         </ScrollView>
       </View>
-  );
+    );
+  }
 }
 
 HomeScreen.navigationOptions = {
