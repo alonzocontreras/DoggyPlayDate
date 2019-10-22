@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/playingdogs.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SubmitButton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/Hidden.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/InputForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LoginForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MenuToggle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MenuToggle/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/Drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/LinksScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LoginScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/RegisterScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MapScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MapScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +103,9 @@
       <workItem from="1571422538576" duration="6499000" />
       <workItem from="1571444041646" duration="7167000" />
       <workItem from="1571513367816" duration="2601000" />
-      <workItem from="1571527272230" duration="12618000" />
+      <workItem from="1571527272230" duration="13705000" />
+      <workItem from="1571607527037" duration="1596000" />
+      <workItem from="1571711272805" duration="208000" />
     </task>
     <servers />
   </component>

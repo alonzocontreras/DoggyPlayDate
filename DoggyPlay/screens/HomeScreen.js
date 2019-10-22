@@ -20,8 +20,6 @@ export default class HomeScreen extends Component  {
       <View style={styles.container}>
         <ScrollView
             contentContainerStyle={styles.container}>
-          <Header title="Create Account"/>
-          <LoginForm style={styles.formContainer}/>
           <MenuToggle navigation={this.props.navigation} />
         </ScrollView>
       </View>
@@ -36,15 +34,8 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",
     width: "100%"
-  },
-  formContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    backgroundColor: "#F5FCFF"
   }
 });

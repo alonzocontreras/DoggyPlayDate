@@ -13,7 +13,13 @@ import MapScreen from "../screens/MapScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
-  default: {}
+  default: {},
+});
+
+const homeConfig = Platform.select({
+  web: { headerMode: "screen" },
+  default: {},
+    initialRouteName: "Map"
 });
 
 const MainStackNavigator = createStackNavigator({
@@ -33,15 +39,20 @@ const MainStackNavigator = createStackNavigator({
 
 const HomeStack = createStackNavigator(
   {
-    Home: HomeScreen,
     Map: {
       screen: MapScreen,
       navigationOptions: {
         header: null
       }
+    },
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        header: null
+      }
     }
   },
-  config
+  homeConfig
 );
 
 HomeStack.navigationOptions = ({ navigation }) => ({

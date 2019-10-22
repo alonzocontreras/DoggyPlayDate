@@ -20,11 +20,6 @@ class MenuToggle extends Component {
         );
     }
 }
-const onPress = () => {
-    this.props.navigation.toggleDrawer();
-};
-
-
 
 const styles = StyleSheet.create({
     container: {
