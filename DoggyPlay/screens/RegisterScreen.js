@@ -1,39 +1,44 @@
-import React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
-
+import React, { Component } from "react";
+import { ScrollView, StyleSheet, View, ImageBackground } from "react-native";
 import Header from "../components/Header";
-import LoginForm from "../components/LoginForm";
-import MenuToggle from "../components/MenuToggle";
 import RegisterForm from "../components/RegisterForm";
 
-export default function RegisterScreen (){
+export default class RegisterScreen extends Component {
+  render() {
     return (
-        <View style={styles.container}>
-            <ScrollView contentContainerStyle={styles.container}>
-                <MenuToggle navigation={this.props.navigation}/>
-                <Header title="Register" />
-                <RegisterForm style={styles.formContainer} />
-            </ScrollView>
+      <ImageBackground source={require("../assets/images/cute-dog.gif")}
+                       style={styles.imageBackground}>
+        <View style={styles.overlay}>
+          <Header title="Register" />
+          <ScrollView contentContainerStyle={styles.container}>
+            <RegisterForm navigation={this.props.navigation} />
+          </ScrollView>
         </View>
+      </ImageBackground>
     );
+  }
 }
 
-RegisterScreen.navigationOptions = {
-    header: null
-};
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
-        width: "100%"
-    },
-    formContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+  container: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#F5FCFF",
+    width: "100%"
+  },
+    imageBackground: {
         width: "100%",
-        backgroundColor: "#F5FCFF"
+        height: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+        // opacity: 0.7,
+        zIndex: -2
+    },
+    overlay: {
+        width: "100%",
+        height: "100%",
+        zIndex: 0,
+        backgroundColor: "white",
+        opacity: 0.7
     }
 });

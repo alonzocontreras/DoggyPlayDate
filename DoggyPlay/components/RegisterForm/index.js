@@ -34,11 +34,11 @@ const validationSchema = Yup.object().shape({
 
 const RegisterForm = props => (
     <Formik
-        onSubmit={values => alert(JSON.stringify(values, null, 2))}
+        onSubmit={values => console.log(values)}
         validationSchema={validationSchema}
         initialValues={props.initialValues}
         render={props => (
-            <Form>
+            <Form style={{ width: "80%"}}>
               <FormikInput label="First Name" name="firstName" />
               <FormikInput label="Last Name" name="lastName" />
               <FormikInput label="email" name="email" type="email" />
@@ -46,17 +46,9 @@ const RegisterForm = props => (
               <FormikInput label="confirm password" name="confirmPassword" />
               <Switch label="I have read and agree to terms" name="termAgreement" />
               <Button onPress={props.handleSubmit} title="SUBMIT" />
-              <Text style={{ fontSize: 20 }}>{JSON.stringify(props, null, 2)}</Text>
             </Form>
         )}
     />
 );
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 100,
-    width: "100%"
-  }
-});
 
 export default RegisterForm;

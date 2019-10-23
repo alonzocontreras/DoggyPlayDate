@@ -28,7 +28,7 @@ const validationSchema = Yup.object().shape({
     .required("Password is required")
 });
 
-export default class LoginForm extends React.Component {
+export default class LoginForm extends Component {
   constructor(props) {
     super(props);
   }

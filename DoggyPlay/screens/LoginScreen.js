@@ -1,12 +1,9 @@
-import React from "react";
+import React, { Component} from "react";
 import { ScrollView, StyleSheet, ImageBackground, View } from "react-native";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 
-export default class LoginScreen extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default class LoginScreen extends Component {
   static navigationOptions = {
     header: null,
     tabBarVisible: false

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="" />
+    <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/cute-dog.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LoginForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/RegisterForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/Drawer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/Hidden.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/HiddenLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/RegisterScreen.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/@expo/vector-icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -37,15 +52,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/node_modules/@expo/vector-icons" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/containers" />
       <recent name="$PROJECT_DIR$/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -98,7 +114,8 @@
       <workItem from="1571513367816" duration="2601000" />
       <workItem from="1571527272230" duration="13705000" />
       <workItem from="1571607527037" duration="1596000" />
-      <workItem from="1571711272805" duration="369000" />
+      <workItem from="1571711272805" duration="1886000" />
+      <workItem from="1571756051421" duration="9282000" />
     </task>
     <servers />
   </component>
