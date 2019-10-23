@@ -1,50 +1,67 @@
-import React, {Component} from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import Header from "../components/Header";
-import LoginForm from "../components/LoginForm";
+import React, { Component } from "react";
+import { ScrollView, StyleSheet, View, Dimensions, Text } from "react-native";
+import Carousel from "react-native-snap-carousel";
 import MenuToggle from "../components/MenuToggle";
+import Header from "../components/Header";
 
+export default class HomeScreen extends Component {
+  screenWidth = Math.round(Dimensions.get("window").width);
 
+  _renderItem({ item, index }) {
+    return (
+      <View style={styles.slide}>
 
-export default class HomeScreen extends Component  {
-  constructor(props){
-    super(props)
+      </View>
+    );
   }
+
   render() {
-  return (
+    return (
       <View style={styles.container}>
-        <ScrollView
-            contentContainerStyle={styles.container}>
-          <Header title="Create Account"/>
-          <LoginForm style={styles.formContainer}/>
-          <MenuToggle navigation={this.props.navigation} />
+        <MenuToggle navigation={this.props.navigation} />
+        <Header title="News" />
+        <ScrollView contentContainerStyle={styles.container}>
+          <Carousel
+            data={data}
+            renderItem={this._renderItem}
+            autoplay={true}
+            enableSnap={true}
+            loop={true}
+            sliderWidth={this.screenWidth}
+            itemWidth={(this.screenWidth * 9) / 10}
+          />
         </ScrollView>
       </View>
     );
   }
 }
 
-HomeScreen.navigationOptions = {
-  header: null,
-};
+const data = [
+  {
+    title: "Who let the dogs out?!",
+    author: 'Alonzo "The Truth" Contreras',
+    image_url: "",
+    article: "For real bro, who let the damn dogs out again? Look at those things! Those are fucking wolves, dude!! Like what the hell are they even doing out here? This is crazy man, like I’ma be at home making my own street tacos and hear some motherfucking wolves fighting outside in the Sunset? Brooooo, hell to the no. You know what..."
+  },
+  {
+    title: "",
+    author: "",
+    image_url: "",
+    article: ""
+  },
+  {
+    title: "",
+    author: "",
+    image_url: "",
+    article: ""
+  }
+];
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",
     width: "100%"
-  },
-  formContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    backgroundColor: "#F5FCFF"
   }
 });
