@@ -11,23 +11,28 @@ import CreateScreen from "../screens/CreateScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import TabBarIcon from "../components/TabBarIcon";
 import { Platform } from "react-native";
+import MyProfileScreen from "../screens/MyProfileScreen";
+import MyPlacesScreen from "../screens/MyPlacesScreen";
+import MyEventsScreen from "../screens/MyEventsScreen";
+import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
+import FAQScreen from "../screens/FAQScreen";
 
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-      initialRouteName: "Login"
-  },
+    initialRouteName: "Login"
+  }
 });
 
-const MyDrawerNavigator = createDrawerNavigator(
+const DrawerNavigator = createDrawerNavigator(
   {
-      Login: {
-          screen: LoginScreen,
-          navigationOptions: {
-              drawerLabel: <HiddenLabel />,
-              header: null
-          }
-      },
+    Login: {
+      screen: LoginScreen,
+      navigationOptions: {
+        drawerLabel: <HiddenLabel />,
+        header: null
+      }
+    },
     Map: {
       screen: MapScreen,
       navigationOptions: {
@@ -46,9 +51,39 @@ const MyDrawerNavigator = createDrawerNavigator(
       navigationOptions: {
         header: null
       }
+    },
+    MyProfile: {
+      screen: MyProfileScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    MyPlaces: {
+      screen: MyPlacesScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    MyEvents: {
+      screen: MyEventsScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    ReportAnIssue: {
+      screen: ReportAnIssueScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    FAQ: {
+      screen: FAQScreen,
+      navigationOptions: {
+        header: null
+      }
     }
   },
   homeConfig
 );
 
-export default MyDrawerNavigator;
+export default DrawerNavigator;
