@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "20%",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
     padding: 20
   },
   title: {

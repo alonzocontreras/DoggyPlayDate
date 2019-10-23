@@ -1,41 +1,61 @@
-import React from 'react';
-import {
-    ScrollView,
-    StyleSheet,
-    View,
-} from 'react-native';
-
+import React, { Component} from "react";
+import { ScrollView, StyleSheet, ImageBackground, View } from "react-native";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 
-export default function HomeScreen() {
+export default class LoginScreen extends Component {
+  static navigationOptions = {
+    header: null,
+    tabBarVisible: false
+  };
+  render() {
     return (
-        <View style={styles.container}>
-            <ScrollView
-                contentContainerStyle={styles.container}>
-                <Header title="Create Account"/>
-                <LoginForm style={styles.formContainer}/>
-            </ScrollView>
+      <ImageBackground
+        source={require("../assets/images/playingdogs.gif")}
+        style={styles.imageBackground}
+      >
+        <View style={styles.overlay}>
+          <Header title="Login" />
+          <ScrollView contentContainerStyle={styles.container}>
+            <LoginForm navigation={this.props.navigation} />
+          </ScrollView>
         </View>
+      </ImageBackground>
     );
+  }
 }
 
-HomeScreen.navigationOptions = {
-    header: null,
+LoginScreen.navigationOptions = {
+  header: null
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
-        width: "100%"
-    },
-    formContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        backgroundColor: "#F5FCFF"
-    }
+  container: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "transparent",
+    width: "100%",
+    zIndex: 2
+  },
+  formContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    backgroundColor: "#F5FCFF"
+  },
+  imageBackground: {
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    // opacity: 0.7,
+    zIndex: -2
+  },
+  overlay: {
+    width: "100%",
+    height: "100%",
+    zIndex: 0,
+    backgroundColor: "white",
+    opacity: 0.5
+  }
 });
