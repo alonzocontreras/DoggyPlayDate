@@ -11,6 +11,7 @@ import MyProfileScreen from "../screens/MyProfileScreen";
 import MyEventsScreen from "../screens/MyEventsScreen";
 import MyPlacesScreen from "../screens/MyPlacesScreen";
 import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
+import LoginScreen from "../screens/LoginScreen";
 
 const config = Platform.select({
     web: {headerMode: 'screen'},
@@ -19,7 +20,7 @@ const config = Platform.select({
 
 const HomeStack = createStackNavigator(
     {
-        Home: HomeScreen,
+        Home: MapScreen,
         MyProfile: MyProfileScreen,
         MyPlaces: MyPlacesScreen,
         MyEvents: MyEventsScreen,
