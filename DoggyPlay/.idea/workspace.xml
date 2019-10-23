@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/DrawerNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,7 @@
       <workItem from="1571607527037" duration="1596000" />
       <workItem from="1571711272805" duration="1886000" />
       <workItem from="1571756051421" duration="9282000" />
-      <workItem from="1571852996793" duration="1656000" />
+      <workItem from="1571852996793" duration="4959000" />
     </task>
     <servers />
   </component>
