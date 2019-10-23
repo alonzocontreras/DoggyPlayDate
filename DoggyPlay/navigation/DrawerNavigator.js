@@ -52,25 +52,25 @@ const DrawerNavigator = createDrawerNavigator(
         header: null
       }
     },
-    MyProfile: {
+    "My Profile": {
       screen: MyProfileScreen,
       navigationOptions: {
         header: null
       }
     },
-    MyPlaces: {
+    "My Places": {
       screen: MyPlacesScreen,
       navigationOptions: {
         header: null
       }
     },
-    MyEvents: {
+    "My Events": {
       screen: MyEventsScreen,
       navigationOptions: {
         header: null
       }
     },
-    ReportAnIssue: {
+    "Report An Issue": {
       screen: ReportAnIssueScreen,
       navigationOptions: {
         header: null
