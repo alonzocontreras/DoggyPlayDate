@@ -15,7 +15,7 @@ export default class LoginScreen extends Component {
         style={styles.imageBackground}
       >
         <View style={styles.overlay}>
-          <Header title="Login" />
+          <Header title="Doggy PlayDate" />
           <ScrollView contentContainerStyle={styles.container}>
             <LoginForm navigation={this.props.navigation} />
           </ScrollView>
