@@ -1,75 +1,78 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
     ScrollView,
     StyleSheet,
-    Text,
     View,
+    Dimensions,
+    Text,
     Image
-} from 'react-native';
+} from "react-native";
+import Carousel from "react-native-snap-carousel";
 import MenuToggle from "../components/MenuToggle";
-//static image as placeholder for dynamic pics later
-
-const petPic = require('../assets/images/cooper.jpg');
-const ownerPic = require('../assets/images/ownerPic.jpg');
-
-const styles = StyleSheet.create({
-
-    ownerInfo: {
-        fontSize: 20,
-        textAlign: 'center',
-        top: 40
-    },
-
-    ownerPic: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        top: 35,
-        bottom: 200,
-        left: 80,
-        right: 0,
-        width: 200,
-        height: 200,
-        borderRadius: 100
-    },
-    profile: {
-        color: 'black',
-        fontSize: 30,
-        textAlign: 'center',
-        top: 40
-    },
-    petInfo: {
-        fontSize: 20,
-        textAlign: 'center',
-        top: 65
-    },
-    petPic: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        top: 65,
-        bottom: 0,
-        left: 80,
-        right: 0,
-        width: 200,
-        height: 200,
-        borderRadius: 100
-    },
-
-});
+import Header from "../components/Header";
+import {fontSize} from "@material-ui/system";
 
 export default class MyProfileScreen extends Component {
+    screenWidth = Math.round(Dimensions.get("window").width);
+
+    data = [
+        {
+            image_url: "../assets/images/ownerPic.jpg",
+            name: "Alvin Nguyen",
+            location: "San Francisco",
+            dog: "Cooper",
+            age: "3 years old",
+            breed: "Rat Terrier"
+        },
+        {
+            title: "",
+            author: "",
+            image_url: "",
+            article: ""
+        },
+        {
+            title: "",
+            author: "",
+            image_url: "",
+            article: ""
+        }
+    ];
+
+    _renderItem({ item, index }) {
+        return (
+            <View style={styles.slide}>
+                <Image source={require("../assets/images/dog-fight.jpeg")} />
+            </View>
+        );
+    }
+
     render() {
         return (
-            <View>
-                <Text style ={styles.profile}>My Profile</Text>
-                <Image style={styles.ownerPic} source={ownerPic}/>
-                <Text style={styles.ownerInfo}>Alvin Nguyen</Text>
-                <Text style={styles.ownerInfo}>San Francisco, CA</Text>
-                <Image style={styles.petPic} source={petPic}/>
-                <Text style={styles.petInfo}>Cooper</Text>
-                <Text style={styles.petInfo}>Rat Terrier</Text>
-                <Text style={styles.petInfo}>3 years old</Text>
-                <MenuToggle navigation={this.props.navigation}/>
+            <View style={styles.container}>
+                <MenuToggle navigation={this.props.navigation} />
+                <Header title="My Profile" />
+                        <Image style={{width: 200, height: 200, borderRadius: 100,}} source={require("../assets/images/ownerPic.jpg")} />
+                        <Text style={{fontSize: 15, alignItems: 'center'}}>{this.data[0].name}</Text>
+                        <Text style={{fontSize: 15}}>{this.data[0].location}</Text>
+                        <Image style={{width: 200, height: 200, borderRadius: 100, top: 30}} source={require("../assets/images/cooper.jpg")} />
+                        <Text style={{fontSize: 15, top: 40}}>{this.data[0].dog}</Text>
+                        <Text style={{fontSize: 15, top: 40}}>{this.data[0].age}</Text>
+                        <Text style={{fontSize: 15, top: 40}}>{this.data[0].breed}</Text>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        backgroundColor: "#F5FCFF",
+        width: "100%"
+    },
+    carousel: {
+        flex: 1,
+        width: "80%",
+        alignItems: 'center'
+    }
+});

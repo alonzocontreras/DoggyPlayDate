@@ -52,6 +52,8 @@ export default class HomeScreen extends Component {
         <ScrollView contentContainerStyle={styles.container}>
           <View style={styles.carousel}>
             <Image source={require("../assets/images/dog-fight.jpeg")} />
+            <Text>{this.data[0].title}</Text>
+            <Text>{this.data[0].author}</Text>
             <Text>{this.data[0].article}</Text>
           </View>
         </ScrollView>

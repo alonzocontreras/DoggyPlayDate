@@ -20,7 +20,7 @@ import FAQScreen from "../screens/FAQScreen";
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "Login"
+    initialRouteName: "My Places"
   }
 });
 
