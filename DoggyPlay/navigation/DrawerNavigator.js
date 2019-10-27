@@ -1,16 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { createDrawerNavigator } from "react-navigation-drawer";
-import { createBottomTabNavigator } from "react-navigation-tabs";
-import { createStackNavigator } from "react-navigation-stack";
+import { Platform } from "react-native";
 import HomeScreen from "../screens/HomeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import HiddenLabel from "./HiddenLabel";
 import MapScreen from "../screens/MapScreen";
 import RegisterScreen from "../screens/RegisterScreen";
-import CreateScreen from "../screens/CreateScreen";
+import CreateEventScreen from "../screens/CreateGroupScreen";
 import SettingsScreen from "../screens/SettingsScreen";
-import TabBarIcon from "../components/TabBarIcon";
-import { Platform } from "react-native";
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyPlacesScreen from "../screens/MyPlacesScreen";
 import MyEventsScreen from "../screens/MyEventsScreen";
@@ -20,7 +17,7 @@ import FAQScreen from "../screens/FAQScreen";
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "Login"
+    initialRouteName: "Home"
   }
 });
 
@@ -66,6 +63,12 @@ const DrawerNavigator = createDrawerNavigator(
     },
     "My Events": {
       screen: MyEventsScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    "Create Event": {
+      screen: CreateEventScreen,
       navigationOptions: {
         header: null
       }
