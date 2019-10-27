@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/CreateGroupScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/EventsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/DrawerNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/CreateScreen.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +113,8 @@
       <workItem from="1571607527037" duration="1596000" />
       <workItem from="1571711272805" duration="1886000" />
       <workItem from="1571756051421" duration="9282000" />
-      <workItem from="1571852996793" duration="4959000" />
+      <workItem from="1571852996793" duration="16176000" />
+      <workItem from="1571978619445" duration="25315000" />
     </task>
     <servers />
   </component>

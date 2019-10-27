@@ -36,7 +36,14 @@ async function loadResourcesAsync() {
     await Promise.all([
       Asset.loadAsync([
         require("./assets/images/robot-dev.png"),
-        require("./assets/images/robot-prod.png")
+        require("./assets/images/robot-prod.png"),
+        require("./assets/images/dog-fight.jpeg"),
+        require("./assets/images/cute-dog.gif"),
+        require("./assets/images/crime-fighters.jpeg"),
+        require("./assets/images/playingdogs.gif"),
+        require("./assets/images/dogbonebutton.png"),
+        require("./assets/images/dogbonebutton2.png"),
+        require("./assets/images/stranger-dogs.jpeg")
       ]),
       Font.loadAsync({
         // This is the font that we are using for our tab bar
@@ -44,6 +51,7 @@ async function loadResourcesAsync() {
         // We include SpaceMono because we use it in HomeScreen.js. Feel free to
         // remove this if you are not using it in your app
         'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+        'purple-purse': require('./assets/fonts/PurplePurse-Regular.ttf')
       }),
     ]);
   } catch (e) {
