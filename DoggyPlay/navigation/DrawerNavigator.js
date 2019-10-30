@@ -17,7 +17,7 @@ import FAQScreen from "../screens/FAQScreen";
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "My Places"
+    initialRouteName: "Report An Issue"
   }
 });
 
