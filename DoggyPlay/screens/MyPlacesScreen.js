@@ -5,7 +5,8 @@ import {
     View,
     Dimensions,
     Text,
-    Image
+    Image,
+    FlatList
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import MenuToggle from "../components/MenuToggle";
@@ -18,26 +19,31 @@ export default class HomeScreen extends Component {
         {
             date: "08/23/19",
             park: "Duboce",
+            image_url: require("../assets/images/duboce.jpg")
 
         },
         {
             date: "08/16/19",
             park: "Fort Funston",
+            image_url: require("../assets/images/fortFunston.jpg")
         },
         {
             date: "08/15/19",
             park: "Alamo Square",
+            image_url: require("../assets/images/alamoSquare.jpg")
         },
         {
             date: "08/02/19",
             park: "Mission Creek",
+            image_url: require("../assets/images/missionCreek.jpg")
         }
     ];
 
     _renderItem({ item, index }) {
         return (
-            <View style={styles.slide}>
-                <Image source={require("../assets/images/dog-fight.jpeg")} />
+            <View>
+                <Text style={{fontSize: 20}}>{item.date + " - " + " " + item.park}</Text>
+                <Image style={{width: 370, height: 200}} source= {item.image_url} />
             </View>
         );
     }
@@ -51,18 +57,11 @@ export default class HomeScreen extends Component {
             <View style={styles.container}>
                 <MenuToggle navigation={this.props.navigation} />
                 <Header title="My Places" />
-                <ScrollView contentContainerStyle={styles.container}>
-                    <View style={styles.carousel}>
-                        <Text style={{fontSize: 20}}>{this.data[0].date + " - " + " " + this.data[0].park}</Text>
-                        <Image style={{width: 370, height: 200}} source={require("../assets/images/duboce.jpg")} />
-                        <Text style={{fontSize: 20}}>{this.data[1].date + " - " + " " + this.data[1].park}</Text>
-                        <Image style={{width: 370, height: 200}} source={require("../assets/images/fortFunston.jpg")} />
-                        <Text style={{fontSize: 20}}>{this.data[2].date + " - " + " " + this.data[2].park}</Text>
-                        <Image style={{width: 370, height: 200}} source={require("../assets/images/alamoSquare.jpg")} />
-                        <Text style={{fontSize: 20}}>{this.data[3].date + " - " + " " + this.data[3].park}</Text>
-                        <Image style={{width: 370, height: 200}} source={require("../assets/images/missionCreek.jpg")} />
-                    </View>
-                </ScrollView>
+                <View style={{ flex: 1 }}><FlatList
+                    data={this.data}
+                    renderItem={this._renderItem}
+                    keyExtractor={(item, index) => index.toString()}
+                /></View>
             </View>
         );
     }
