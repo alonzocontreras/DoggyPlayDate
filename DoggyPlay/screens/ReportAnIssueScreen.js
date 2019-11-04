@@ -18,7 +18,7 @@ export default class ReportAnIssueScreen extends Component {
 
     data = [
         {
-            value: "Spam or Abuse",
+            value: "Lost/ Missing Dog",
         },
         {
             value: "Something Isn't Working",
@@ -27,7 +27,7 @@ export default class ReportAnIssueScreen extends Component {
             value: "General Feedback",
         },
         {
-            value: "Lost Dog"
+            value: "Other"
         }
     ];
 
@@ -41,9 +41,9 @@ export default class ReportAnIssueScreen extends Component {
                     data={this.data}
                 />
                 <TextInput
-                    style={{top: 150, height: 40, borderColor: 'gray', borderWidth:2 }}
-                />
+                    style={{top: 150, height: 40, borderColor: 'gray', borderWidth:2}}
 
+                />
             </View>
         );
     }
