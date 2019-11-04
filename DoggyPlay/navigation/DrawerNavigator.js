@@ -17,7 +17,7 @@ import FAQScreen from "../screens/FAQScreen";
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "FAQ"
+    initialRouteName: "Settings"
   }
 });
 
@@ -84,6 +84,12 @@ const DrawerNavigator = createDrawerNavigator(
       navigationOptions: {
         header: null
       }
+    },
+    Settings:{
+        screen: SettingsScreen,
+        navigationOptions: {
+            header: null
+        }
     }
   },
   homeConfig
