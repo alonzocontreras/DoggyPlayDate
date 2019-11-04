@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/CreateGroupScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/EventsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Form/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/DrawerNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/CreateScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/FAQScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/FAQScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/ReportAnIssueScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ReportAnIssueScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TestScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TestScreen/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +52,9 @@
       <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/screens" />
+      <recent name="$PROJECT_DIR$/__tests__/TestScreen" />
+      <recent name="$PROJECT_DIR$/navigation" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -115,6 +113,14 @@
       <workItem from="1571756051421" duration="9282000" />
       <workItem from="1571852996793" duration="16176000" />
       <workItem from="1571978619445" duration="25315000" />
+      <workItem from="1572245728259" duration="194000" />
+      <workItem from="1572294879858" duration="2769000" />
+      <workItem from="1572319989293" duration="866000" />
+      <workItem from="1572508656773" duration="58000" />
+      <workItem from="1572557465119" duration="13130000" />
+      <workItem from="1572604288558" duration="2000" />
+      <workItem from="1572647703458" duration="4781000" />
+      <workItem from="1572906852164" duration="618000" />
     </task>
     <servers />
   </component>

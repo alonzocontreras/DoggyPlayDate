@@ -13,6 +13,8 @@ import MyPlacesScreen from "../screens/MyPlacesScreen";
 import MyEventsScreen from "../screens/MyEventsScreen";
 import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
 import FAQScreen from "../screens/FAQScreen";
+import InviteScreen from "../screens/InviteScreen";
+import Test from "../screens/TestScreen";
 
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
@@ -67,6 +69,12 @@ const DrawerNavigator = createDrawerNavigator(
         header: null
       }
     },
+    "Create Group": {
+      screen: CreateGroupScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
     "Create Event": {
       screen: CreateEventScreen,
       navigationOptions: {
@@ -77,6 +85,20 @@ const DrawerNavigator = createDrawerNavigator(
       screen: ReportAnIssueScreen,
       navigationOptions: {
         header: null
+      }
+    },
+    Invite: {
+      screen: InviteScreen,
+      navigationOptions: {
+        header: null
+        // drawerLabel: <HiddenLabel />
+      }
+    },
+    Test: {
+      screen: TestScreen,
+      navigationOptions: {
+        header: null,
+        drawerLabel: <HiddenLabel />
       }
     },
     FAQ: {

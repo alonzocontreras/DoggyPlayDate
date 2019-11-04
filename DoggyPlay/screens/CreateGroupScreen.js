@@ -11,12 +11,18 @@ const FormikInput = compose(
     withNextInputAutoFocusInput
 )(TextField);
 
-export default class CreateEventScreen extends Component {
+export default class CreateGroupScreen extends Component {
   constructor(props) {
     super(props);
   }
 
-  fields = [{}];
+  fields = [
+    { label: "Group Name", name: "groupName" },
+    { label: "Member Limit", name: "memberLimit", value: 6 },
+    { label: "Location", name: "location" },
+    { label: "", name: "" },
+    { label: "", name: "" }
+  ];
 
   render() {
     return (
@@ -28,7 +34,8 @@ export default class CreateEventScreen extends Component {
               return <FormikInput label={field.label} name={field.name}/>
             })
           }
-          <SubButton />
+          <SubButton name="Cancel" />
+          <SubButton name="Continue" />
         </ScrollView>
       </>
     );
