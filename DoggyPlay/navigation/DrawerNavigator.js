@@ -6,18 +6,20 @@ import LoginScreen from "../screens/LoginScreen";
 import HiddenLabel from "./HiddenLabel";
 import MapScreen from "../screens/MapScreen";
 import RegisterScreen from "../screens/RegisterScreen";
-import CreateEventScreen from "../screens/CreateGroupScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import CreateGroupScreen from "../screens/CreateGroupScreen";
+import CreateEventScreen from "../screens/CreateEventScreen";
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyPlacesScreen from "../screens/MyPlacesScreen";
 import MyEventsScreen from "../screens/MyEventsScreen";
 import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
 import FAQScreen from "../screens/FAQScreen";
+import InviteScreen from "../screens/InviteScreen";
+import Index from "../screens/TestScreen";
 
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "Report An Issue"
+    initialRouteName: "Test"
   }
 });
 
@@ -26,7 +28,7 @@ const DrawerNavigator = createDrawerNavigator(
     Login: {
       screen: LoginScreen,
       navigationOptions: {
-        drawerLabel: <HiddenLabel />,
+        // drawerLabel: <HiddenLabel />,
         header: null
       }
     },
@@ -67,6 +69,12 @@ const DrawerNavigator = createDrawerNavigator(
         header: null
       }
     },
+    "Create Group": {
+      screen: CreateGroupScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
     "Create Event": {
       screen: CreateEventScreen,
       navigationOptions: {
@@ -77,6 +85,20 @@ const DrawerNavigator = createDrawerNavigator(
       screen: ReportAnIssueScreen,
       navigationOptions: {
         header: null
+      }
+    },
+    Invite: {
+      screen: InviteScreen,
+      navigationOptions: {
+        header: null
+        // drawerLabel: <HiddenLabel />
+      }
+    },
+    Test: {
+      screen: Index,
+      navigationOptions: {
+        header: null,
+        drawerLabel: <HiddenLabel />
       }
     },
     FAQ: {

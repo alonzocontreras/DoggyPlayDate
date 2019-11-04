@@ -1,5 +1,12 @@
-import React, { Component} from "react";
-import { ScrollView, StyleSheet, ImageBackground, View } from "react-native";
+import React, { Component } from "react";
+import {
+  ScrollView,
+  StyleSheet,
+  ImageBackground,
+  View,
+  Dimensions
+} from "react-native";
+import ImageOverlay from "react-native-image-overlay";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 
@@ -8,19 +15,23 @@ export default class LoginScreen extends Component {
     header: null,
     tabBarVisible: false
   };
+
+  height = Dimensions.get("window").height;
+
   render() {
+
     return (
-      <ImageBackground
+      <ImageOverlay
         source={require("../assets/images/playingdogs.gif")}
-        style={styles.imageBackground}
+        overlayAlpha={0.3}
+        height={this.height}
+        contentPosition="center"
       >
-        <View style={styles.overlay}>
-          <Header title="Doggy PlayDate" />
-          <ScrollView contentContainerStyle={styles.container}>
-            <LoginForm navigation={this.props.navigation} />
-          </ScrollView>
-        </View>
-      </ImageBackground>
+        <Header title="Doggy PlayDate" />
+        <ScrollView contentContainerStyle={styles.container}>
+          <LoginForm navigation={this.props.navigation} />
+        </ScrollView>
+      </ImageOverlay>
     );
   }
 }
