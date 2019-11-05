@@ -11,7 +11,6 @@ import MenuToggle from "../components/MenuToggle";
 import Header from "../components/Header";
 import BottomTabNavigator from "../navigation/BottomTabNavigator";
 import { SearchBar } from 'react-native-elements';
-import {TextField} from "@material-ui/core";
 
 export default class FAQScreen extends Component {
 

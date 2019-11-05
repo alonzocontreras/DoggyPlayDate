@@ -6,20 +6,20 @@ import LoginScreen from "../screens/LoginScreen";
 import HiddenLabel from "./HiddenLabel";
 import MapScreen from "../screens/MapScreen";
 import RegisterScreen from "../screens/RegisterScreen";
-import CreateEventScreen from "../screens/CreateGroupScreen";
-import SettingsScreen from "../screens/SettingsScreen";
+import CreateEventScreen from "../screens/CreateEventScreen";
+import CreateGroupScreen from "../screens/CreateGroupScreen";
 import MyProfileScreen from "../screens/MyProfileScreen";
 import MyPlacesScreen from "../screens/MyPlacesScreen";
 import MyEventsScreen from "../screens/MyEventsScreen";
 import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
 import FAQScreen from "../screens/FAQScreen";
 import InviteScreen from "../screens/InviteScreen";
-import Test from "../screens/TestScreen";
+import TestScreen from "../screens/TestScreen";
 
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "FAQ"
+    initialRouteName: "Create Event"
   }
 });
 

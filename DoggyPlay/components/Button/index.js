@@ -13,13 +13,11 @@ class Button extends Component {
 
   render() {
     return (
-      <SafeAreaView>
         <TouchableOpacity onPress={()=> this.handlePress(this.props.route)} style={styles.button}>
           <View>
             <Text style={styles.text}>{this.props.title}</Text>
           </View>
         </TouchableOpacity>
-      </SafeAreaView>
     );
   }
 }
@@ -28,7 +26,8 @@ export default withNavigation(Button);
 
 const styles = StyleSheet.create({
   button: {
-    marginTop: 5,
+    marginTop: 10,
+    padding: 10,
     width: "33%",
     height: 40,
     borderWidth: 0.5,

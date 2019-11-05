@@ -3,17 +3,13 @@ import {
     ScrollView,
     StyleSheet,
     View,
-    Dimensions,
     Text,
     Image
 } from "react-native";
-import Carousel from "react-native-snap-carousel";
 import MenuToggle from "../components/MenuToggle";
 import Header from "../components/Header";
-import {fontSize} from "@material-ui/system";
 
 export default class MyProfileScreen extends Component {
-    screenWidth = Math.round(Dimensions.get("window").width);
 
     data = [
         {
