@@ -106,6 +106,12 @@ const DrawerNavigator = createDrawerNavigator(
       navigationOptions: {
         header: null
       }
+    },
+    Settings:{
+        screen: SettingsScreen,
+        navigationOptions: {
+            header: null
+        }
     }
   },
   homeConfig
