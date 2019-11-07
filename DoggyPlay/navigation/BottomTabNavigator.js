@@ -1,27 +1,37 @@
 import React, { Component } from "react";
 import { View } from "react-native";
-import TabNavigatorButton from './TabNavigatorButton'
+import TabNavigatorButton from "./TabNavigatorButton";
+import { withNavigation } from "react-navigation";
 
-export default class BottomTabNavigator extends Component {
+class BottomTabNavigator extends Component {
   constructor(props) {
     super(props);
   }
 
+  tabNaviButtonLabels = [
+    { id: 0, label: "Create Group", icon: "", action: "createGroup" },
+    { id: 1, label: "Events", icon: "", action: "goToEvents" },
+    { id: 2, label: "Create Event", icon: "", action: "createEvent" }
+  ];
+
   render() {
     return (
       <View style={styles.bottomNavigationBar}>
-        {this.props.labels.map(label => {
+        {this.tabNaviButtonLabels.map(label => {
           return (
-              <TabNavigatorButton
-                label={label.label}
-                key={label.id}
-              />
+            <TabNavigatorButton
+              navigation={this.props.navigation}
+              label={label.label}
+              key={label.id}
+            />
           );
         })}
       </View>
     );
   }
 }
+
+export default withNavigation(BottomTabNavigator);
 
 const styles = {
   bottomNavigationBar: {
@@ -32,5 +42,5 @@ const styles = {
     height: "7%",
     position: "absolute",
     bottom: 0
-  },
+  }
 };

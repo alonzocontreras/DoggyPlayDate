@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/DrawerNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/CreateEventScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateEventScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/TabNavigatorButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/TabNavigatorButton/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/CreateGroupScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateGroupScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/FAQScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/FAQScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MyProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MyProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MapScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MapScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +120,10 @@
       <workItem from="1572557465119" duration="13130000" />
       <workItem from="1572604288558" duration="2000" />
       <workItem from="1572647703458" duration="4781000" />
-      <workItem from="1572906852164" duration="12046000" />
+      <workItem from="1572906852164" duration="14242000" />
+      <workItem from="1572997514016" duration="307000" />
+      <workItem from="1573115243137" duration="1119000" />
+      <workItem from="1573141438303" duration="281000" />
     </task>
     <servers />
   </component>

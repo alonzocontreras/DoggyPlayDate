@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View, Text } from "react-native";
 import Slider from "react-native-slider";
 import Header from "../components/Header";
 import { compose } from "recompose";
@@ -73,18 +73,22 @@ export default class CreateGroupScreen extends Component {
                 {this.fields.map(field => {
                   if (field.name === "memberLimit") {
                     return (
-                      <View key={field.id}>
-                        <FormikInput label={field.label} name={field.name}>
-                          {this.state.chosenLimit}
-                        </FormikInput>
+                      <View key={field.id} style={styles.sliderContainer}>
+                        <Text style={styles.memberLimitText}>Member Limit</Text>
+                        <View style={styles.memberLimitBox}>
+                          <Text style={{ fontSize: 20 }}>
+                            {this.state.chosenLimit}
+                          </Text>
+                        </View>
                         <Slider
                           value={this.state.chosenLimit}
-                          onValueChange={(value) => this.setLimit(value)}
+                          onValueChange={value => this.setLimit(value)}
                           style={{ width: "90%", height: 40 }}
                           minimumValue={1}
                           maximumValue={30}
-                          minimumTrackTintColor="#FFFFFF"
-                          maximumTrackTintColor="#000000"
+                          step={1}
+                          minimumTrackTintColor="#632525"
+                          maximumTrackTintColor="#632525"
                         />
                       </View>
                     );
@@ -124,5 +128,25 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     paddingTop: 15,
     backgroundColor: "#fff"
+  },
+  memberLimitBox: {
+    flex: 1,
+    padding: 5,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#632525",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  sliderContainer: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  memberLimitText: {
+    color: "#632525",
+    fontSize: 20,
+    fontFamily: "purple-purse",
+    padding: 5
   }
 });

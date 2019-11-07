@@ -15,6 +15,7 @@ import ReportAnIssueScreen from "../screens/ReportAnIssueScreen";
 import FAQScreen from "../screens/FAQScreen";
 import InviteScreen from "../screens/InviteScreen";
 import TestScreen from "../screens/TestScreen";
+import SettingsScreen from "../screens/SettingsScreen";
 
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },

@@ -11,19 +11,20 @@ class TabNavigatorButton extends Component {
     routeName: "CreateGroupScreen",
     action: NavigationActions.navigate({ routeName: "Create Group" })
   });
- myEvents = NavigationActions.navigate({
+  myEvents = NavigationActions.navigate({
     routeName: "MyEventsScreen",
     action: NavigationActions.navigate({ routeName: "My Events" })
   });
 
   createEvent = NavigationActions.navigate({
-      routeName: "CreateEventScreen",
-      action: NavigationActions.navigate({ routeName: "Create Event" })
-    });
+    routeName: "CreateEventScreen",
+    action: NavigationActions.navigate({ routeName: "Create Event" })
+  });
 
   handlePress = action => {
     switch (action) {
       case "Create Group":
+        console.log("Create group pressed");
         return this.props.navigation.dispatch(this.createGroup);
       case "Events":
         return this.props.navigation.dispatch(this.createEvent);
