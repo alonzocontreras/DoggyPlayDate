@@ -20,7 +20,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 const homeConfig = Platform.select({
   web: { headerMode: "screen" },
   default: {
-    initialRouteName: "Create Event"
+    initialRouteName: "Login"
   }
 });
 

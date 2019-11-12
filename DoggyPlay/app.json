@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.doggone.doggyplaydate",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDkUz1iA3H2eO2cbF1p1jiTDJC-o4ED9L0"
+      }
     }
   }
 }

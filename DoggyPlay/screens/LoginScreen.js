@@ -19,7 +19,6 @@ export default class LoginScreen extends Component {
   height = Dimensions.get("window").height;
 
   render() {
-
     return (
       <ImageOverlay
         source={require("../assets/images/playingdogs.gif")}
@@ -27,10 +26,12 @@ export default class LoginScreen extends Component {
         height={this.height}
         contentPosition="center"
       >
-        <Header title="Doggy PlayDate" />
-        <ScrollView contentContainerStyle={styles.container}>
-          <LoginForm navigation={this.props.navigation} />
-        </ScrollView>
+        <>
+          <Header title="Doggy PlayDate" />
+          <ScrollView contentContainerStyle={styles.container}>
+            <LoginForm navigation={this.props.navigation} />
+          </ScrollView>
+        </>
       </ImageOverlay>
     );
   }

@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { TextField } from "react-native-material-textfield";
 import { compose } from "recompose";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Formik } from "formik";
 import {
   handleTextInput,
@@ -11,6 +11,7 @@ import {
 } from "react-native-formik";
 import * as Yup from "yup";
 import Switch from "./../Switch";
+import Button from '../../components/Button'
 
 const FormikInput = compose(
     handleTextInput,
@@ -46,7 +47,17 @@ const RegisterForm = props => (
               <FormikInput label="Password" name="password" secureTextEntry />
               <FormikInput label="Confirm Password" name="confirmPassword" secureTextEntry />
               <Switch label="I have read and agree to terms" name="termAgreement" />
-              <Button onPress={props.handleSubmit} title="SUBMIT" />
+                <View
+                    style={{
+                        flex: 1,
+                        flexDirection: "row",
+                        width: "100%",
+                        justifyContent: "space-around"
+                    }}
+                >
+                    <Button title="Cancel" />
+                    <Button title="Register" />
+                </View>
             </Form>
         )}
     />

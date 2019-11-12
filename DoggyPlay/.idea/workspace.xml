@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9be6b910-4774-4d6a-9ca8-d2fa86a6d959" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LoginForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/RegisterForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterForm/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/DrawerNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/DrawerNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/TabNavigatorButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/TabNavigatorButton/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/CreateGroupScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/CreateGroupScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MapScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MapScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,6 +127,11 @@
       <workItem from="1572997514016" duration="307000" />
       <workItem from="1573115243137" duration="1119000" />
       <workItem from="1573141438303" duration="281000" />
+      <workItem from="1573153871361" duration="1091000" />
+      <workItem from="1573191474381" duration="8000" />
+      <workItem from="1573253195777" duration="5835000" />
+      <workItem from="1573281752217" duration="51000" />
+      <workItem from="1573586342502" duration="236000" />
     </task>
     <servers />
   </component>

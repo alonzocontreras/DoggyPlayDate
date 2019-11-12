@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { TextField } from "react-native-material-textfield";
 import { compose } from "recompose";
-import { View, TouchableOpacity, Button, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { Formik } from "formik";
 import {
   handleTextInput,
@@ -10,7 +10,7 @@ import {
   withNextInputAutoFocusInput
 } from "react-native-formik";
 import * as Yup from "yup";
-import Switch from "./../Switch";
+import Button from '../Button'
 
 const FormikInput = compose(
   handleTextInput,
@@ -47,9 +47,17 @@ export default class LoginForm extends Component {
           <Form style={{ width: "80%" }}>
             <FormikInput label="email" name="email" type="email" />
             <FormikInput label="password" name="password" secureTextEntry />
-            <TouchableOpacity style={styles.button}>
-              <Button onPress={props.handleSubmit} title="SUBMIT" />
-            </TouchableOpacity>
+            <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  width: "100%",
+                  justifyContent: "space-around"
+                }}
+            >
+              <Button title="Cancel" />
+              <Button title="Login" />
+            </View>
           </Form>
         )}
       />
