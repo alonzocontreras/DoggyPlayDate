@@ -1,10 +1,12 @@
 node_modules/**/*
+package-lock.json
 .expo/*
 npm-debug.*
 *.jks
 *.p8
 *.p12
 *.key
+.idea/*
 *.mobileprovision
 *.orig.*
 web-build/

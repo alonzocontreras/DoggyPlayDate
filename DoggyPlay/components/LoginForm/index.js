@@ -2,54 +2,77 @@
 import React, { Component } from "react";
 import { TextField } from "react-native-material-textfield";
 import { compose } from "recompose";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { Formik } from "formik";
 import {
-    handleTextInput,
-    withNextInputAutoFocusForm,
-    withNextInputAutoFocusInput
+  handleTextInput,
+  withNextInputAutoFocusForm,
+  withNextInputAutoFocusInput
 } from "react-native-formik";
 import * as Yup from "yup";
-import Switch from "./../Switch";
+import Button from '../Button'
 
 const FormikInput = compose(
-    handleTextInput,
-    withNextInputAutoFocusInput
+  handleTextInput,
+  withNextInputAutoFocusInput
 )(TextField);
 
 const Form = withNextInputAutoFocusForm(View);
 
 const validationSchema = Yup.object().shape({
-    email: Yup.string("Enter your email")
-        .email("Enter a valid email")
-        .required("Email is required"),
-    password: Yup.string("Choose a password")
-        .min(8, "Password must contain at least 8 characters")
-        .required("Password is required")
+  email: Yup.string("Enter your email")
+    .email("Enter a valid email")
+    .required("Email is required"),
+  password: Yup.string("Choose a password")
+    .min(8, "Password must contain at least 8 characters")
+    .required("Password is required")
 });
 
-const LoginForm = props => (
-    <Formik
-        onSubmit={values => alert(JSON.stringify(values, null, 2))}
-        validationSchema={validationSchema}
-        initialValues={props.initialValues}
-        render={props => (
-            <Form>
+export default class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-                <FormikInput label="email" name="email" type="email" />
-                <FormikInput label="password" name="password" />
-                <Button onPress={props.handleSubmit} title="SUBMIT" />
-                {/*<Text style={{ fontSize: 20 }}>{JSON.stringify(props, null, 2)}</Text>*/}
-            </Form>
+  handleSubmit = values => {
+    this.props.navigation.navigate("Map");
+  };
+
+  render() {
+    return (
+      <Formik
+        onSubmit={(values, { setSubmitting }) => this.handleSubmit(values)}
+        validationSchema={validationSchema}
+        initialValues={this.props.initialValues}
+        render={props => (
+          <Form style={{ width: "80%" }}>
+            <FormikInput label="email" name="email" type="email" />
+            <FormikInput label="password" name="password" secureTextEntry />
+            <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  width: "100%",
+                  justifyContent: "space-around"
+                }}
+            >
+              <Button title="Cancel" />
+              <Button title="Login" />
+            </View>
+          </Form>
         )}
-    />
-);
+      />
+    );
+  }
+}
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: 100,
-        width: "100%"
-    }
+  container: {
+    marginTop: 100,
+    width: "100%"
+  },
+  button: {
+    color: "#000",
+    borderWidth: 1,
+    borderColor: "#000"
+  }
 });
-
-export default LoginForm;

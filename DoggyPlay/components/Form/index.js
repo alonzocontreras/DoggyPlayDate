@@ -1,5 +1,5 @@
 //form template
-import React, { Component } from "react";
+import React from "react";
 import { TextField } from "react-native-material-textfield";
 import { compose } from "recompose";
 import { View, Text, Button, StyleSheet } from "react-native";

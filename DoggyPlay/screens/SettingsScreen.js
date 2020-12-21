@@ -1,14 +1,15 @@
-import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import React, {Component} from 'react';
+import MenuToggle from "../components/MenuToggle";
+import Header from "../components/Header";
+import { View } from "react-native";
 
-export default function SettingsScreen() {
-  /**
-   * Go ahead and delete ExpoConfigView and replace it with your content;
-   * we just wanted to give you a quick view of your config.
-   */
-  return <ExpoConfigView />;
+export default class SettingsScreen extends Component {
+  render() {
+    return(
+        <View style={{ flex: 1 }}>
+          <MenuToggle navigation={this.props.navigation}/>
+          <Header title="Settings" />
+        </View>
+    );
+  }
 }
-
-SettingsScreen.navigationOptions = {
-  title: 'app.json',
-};

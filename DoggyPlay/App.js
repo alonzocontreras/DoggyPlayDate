@@ -1,15 +1,18 @@
-import { AppLoading } from 'expo';
-import { Asset } from 'expo-asset';
-import * as Font from 'expo-font';
-import React, { useState } from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { AppLoading } from "expo";
+import { Asset } from "expo-asset";
+import { Ionicons } from "@expo/vector-icons";
+import * as Font from "expo-font";
+import React, { useState } from "react";
+import { useScreens } from "react-native-screens";
+import { Platform, StatusBar, StyleSheet, View } from "react-native";
 
-import AppNavigator from './navigation/AppNavigator';
+const chalk = require("chalk");
+
+import AppNavigator from "./navigation/AppNavigator";
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
-
+  useScreens();
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return (
       <AppLoading
@@ -21,7 +24,7 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        {Platform.OS === "ios" && <StatusBar barStyle="default" />}
         <AppNavigator />
       </View>
     );
@@ -29,19 +32,31 @@ export default function App(props) {
 }
 
 async function loadResourcesAsync() {
-  await Promise.all([
-    Asset.loadAsync([
-      require('./assets/images/robot-dev.png'),
-      require('./assets/images/robot-prod.png'),
-    ]),
-    Font.loadAsync({
-      // This is the font that we are using for our tab bar
-      ...Ionicons.font,
-      // We include SpaceMono because we use it in HomeScreen.js. Feel free to
-      // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-    }),
-  ]);
+  try {
+    await Promise.all([
+      Asset.loadAsync([
+        require("./assets/images/robot-dev.png"),
+        require("./assets/images/robot-prod.png"),
+        require("./assets/images/dog-fight.jpeg"),
+        require("./assets/images/cute-dog.gif"),
+        require("./assets/images/crime-fighters.jpeg"),
+        require("./assets/images/playingdogs.gif"),
+        require("./assets/images/dogbonebutton.png"),
+        require("./assets/images/dogbonebutton2.png"),
+        require("./assets/images/stranger-dogs.jpeg")
+      ]),
+      Font.loadAsync({
+        // This is the font that we are using for our tab bar
+        ...Ionicons.font,
+        // We include SpaceMono because we use it in HomeScreen.js. Feel free to
+        // remove this if you are not using it in your app
+        "space-mono": require("./assets/fonts/SpaceMono-Regular.ttf"),
+        "purple-purse": require("./assets/fonts/PurplePurse-Regular.ttf")
+      })
+    ]);
+  } catch (e) {
+    console.error("No fonts found");
+  }
 }
 
 function handleLoadingError(error) {
@@ -57,6 +72,6 @@ function handleFinishLoading(setLoadingComplete) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-  },
+    backgroundColor: "#fff"
+  }
 });
