@@ -19,7 +19,7 @@
     "expo-font": "^7.0.0",
     "expo-web-browser": "^7.0.1",
     "formik": "^1.5.8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "native-base": "^2.13.8",
     "prettier": "^1.18.2",
     "react": "16.10.2",
